@@ -1,69 +1,67 @@
-House and Flat Price Prediction 🏠💰
+Real Estate Price Prediction and Analysis 🏠📊
 Project Description
-This project aims to predict the prices of houses and flats based on user inputs and a trained machine learning model. The system allows users to:
+This project focuses on performing an Exploratory Data Analysis (EDA) on real estate data to derive actionable insights about property prices, characteristics, and trends. It also includes predictive modeling for house and flat prices based on key features. The analysis and predictions aim to assist users in making informed decisions in the real estate market.
 
-Analyze house/flat price trends.
-Predict the price of a property based on various features.
-Provide recommendations and insights on properties.
-The project includes:
-
-Web Scraping: Data collected from real estate websites.
-Data Processing: Cleaned and prepared for analysis and modeling.
-Price Prediction: Based on user inputs via a Streamlit web app.
-Recommendations: Insights and analysis to guide property buyers.
-Features of the Application
-User Input:
-Property type (flat or house).
-Number of bedrooms, bathrooms, balconies, etc.
-Property age, furnishing type, luxury category, etc.
-Prediction:
-Predicts the price range for a property based on user inputs.
-Recommendations:
-Provides analysis and insights to help users make informed decisions.
-Web Interface:
-A user-friendly Streamlit application.
-Tools and Technologies Used
+Features of the Analysis
+Data Collection:
+Data sourced via web scraping from real estate websites.
+Includes properties like flats and houses with various features.
+Data Cleaning:
+Handled missing values.
+Standardized categorical variables (e.g., property types, luxury categories).
+Feature Engineering:
+Added derived features such as Built_Up_Area, Property Age, and categorical classifications.
+Visualization:
+Distribution plots for numerical variables.
+Bar plots for categorical variables.
+Correlation heatmap to analyze relationships.
+Statistical Insights:
+Skewness reduction using log transformations.
+Grouped aggregations for analyzing price patterns based on location, type, and more.
+Tools and Libraries Used
 Programming Language: Python
-Libraries:
 Data Analysis: Pandas, NumPy
-Modeling: Scikit-learn
-Web App: Streamlit
-Data Source: Web scraping from real estate platforms
-Model Deployment: Pickle for saving pipeline and models
-How to Run the Project
-Clone the repository:
+Data Visualization: Matplotlib, Seaborn
+Web App Deployment: Streamlit
+Machine Learning: Scikit-learn
+Key Insights
+Location and luxury category are significant factors influencing property prices.
+Log transformations effectively normalized features like Built_Up_Area and price.
+Older properties are generally priced lower, but luxury and furnishing significantly impact valuations.
+Visuals
+The analysis includes:
 
+Histograms and Boxplots: To explore numerical feature distributions.
+Bar Charts: To compare categories like Furnishing Type and Property Type.
+Correlation Heatmap: To identify relationships between features and target price.
+How to Run
+Clone the repository.
 bash
 Copy code
-git clone https://github.com/yourusername/house-price-prediction.git
-Navigate to the project directory:
-
+git clone https://github.com/yourusername/real-estate-eda.git
+Ensure the required files are in place:
+df.pkl: Processed dataset.
+pipeline.pkl: Machine learning pipeline.
+Install dependencies:
 bash
 Copy code
-cd house-price-prediction
-Install the required dependencies:
-
-bash
-Copy code
-pip install -r requirements.txt
-Ensure the following files are in place:
-
-df.pkl: The processed dataset file.
-pipeline.pkl: The trained machine learning model pipeline.
+pip install pandas numpy matplotlib seaborn streamlit scikit-learn
 Run the Streamlit application:
-
 bash
 Copy code
 streamlit run 1_PricePredictor.py
-Key Features of the Prediction Model
-Uses a robust machine learning pipeline to predict prices.
-Outputs price range (low and high estimates) for user-specified properties.
+Example Workflow
+User Input:
+Select property details like type, location, number of bedrooms, bathrooms, etc.
+Analysis:
+View trends and patterns in property features.
+Prediction:
+Predict price range for given property inputs.
 Future Scope
-Enhance the web scraping pipeline to include more data sources.
-Incorporate additional features like location-based analysis.
-Deploy the model as a cloud-based API for broader accessibility.
-Add advanced data visualizations for better user insights.
-Example Usage
-Select property type, sector, number of bedrooms, bathrooms, etc.
-Input built-up area and other optional details.
-Click Predict to get the estimated price range.
+Integrate advanced data sources for enriched analysis.
+Add advanced visualization techniques (e.g., interactive dashboards).
+Improve predictive accuracy using advanced models or ensemble techniques.
+Deploy as a web service or API for broader usage.
+Dataset Information
+The dataset is sourced via web scraping and processed for analysis. Compliance with data usage policies is ensured.
+
